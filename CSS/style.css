@@ -1,0 +1,86 @@
+* {
+    font-family: monospace;
+}
+
+html {
+    background-image: url(../images/background-pattern-image.jpg);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+main {
+    display: flex;
+    background-image: url(../images/card-background-pattern-image.jpg);
+    min-width: 50vw;
+    min-height: 40vh;
+    max-width: 80vw;
+    max-height: 70vh;
+    padding: 2em;
+    border: 10px solid rgb(163, 159, 122);
+    border-radius: 15px;
+}
+
+figure {
+    display: flex;
+    margin: auto;
+    flex-flow: column;
+    justify-content: center;
+    max-width: 400px;
+    min-width: 100px;
+}
+
+img {
+    display: flex;
+    max-width: 400px;
+    min-width: 100px;
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 5%;
+    font-weight: 500;
+    font-size: 50px;
+}
+
+h1, h2, h3, p {
+    display: inline;
+    text-align: center;
+}
+
+#back-side {
+    position: relative;
+    overflow: hidden;
+}
+
+#back-side > #front-side {
+    position: absolute;
+    inset: 0;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(240, 239, 239, 0.7);
+    border-radius: 15px;
+    opacity: 0;
+}
+
+#back-side,
+#back-side > #front-side {
+    transition: 0.5s ease-in-out;
+}
+
+#back-side:hover > figure.blur {
+    transition: 0.5s;
+    filter: blur(10px);
+}
+
+#back-side > #front-side:hover {
+    opacity: 1;
+}
